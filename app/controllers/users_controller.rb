@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       # Handle a successful save.
       # Redirect to profile page.
       # Flash method to display a temporary message.
+      log_in @user # login upon signup
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
